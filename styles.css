@@ -12,16 +12,18 @@ body {
   background-color: #f0f0f0;
   font-family: "Roboto", sans-serif;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 640px; /* 16 squares * 40px each square */
-  height: 640px; /* 16 squares * 40px each square */
+  width: 90vw; /* Use viewport width for responsiveness */
+  height: 90vw; /* Use viewport width for responsiveness */
+  max-width: 640px; /* Limit maximum size for larger screens */
+  max-height: 640px; /* Limit maximum size for larger screens */
 }
+
 .grid {
   background-color: white;
 }
@@ -48,4 +50,5 @@ button {
 h1 {
   margin-bottom: 10px;
   font-size: 3rem;
+  text-align: center; /* Center the title on mobile */
 }

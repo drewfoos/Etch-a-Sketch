@@ -10,6 +10,17 @@ let makeBoard = (gridSize) => {
     squareDiv.addEventListener("mouseover", () => {
       squareDiv.classList.add("trail");
     });
+    squareDiv.addEventListener("touchstart", () => {
+      squareDiv.classList.add("trail");
+    });
+    squareDiv.addEventListener("touchmove", (e) => {
+      e.preventDefault(); // Prevent scrolling while drawing
+      const touch = e.touches[0];
+      const element = document.elementFromPoint(touch.clientX, touch.clientY);
+      if (element && element.classList.contains("grid")) {
+        element.classList.add("trail");
+      }
+    });
     container.appendChild(squareDiv);
   }
 };
